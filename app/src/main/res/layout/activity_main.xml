@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/almostBlack"
+    tools:ignore="HardcodedText"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@color/grey"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/workingsTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:lines="2"
+            android:maxLines="2"
+            android:textAlignment="textEnd"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@id/resultsTV"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/resultsTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:maxLines="1"
+            android:text=""
+            android:textAlignment="textEnd"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/resultsTV"
+            app:layout_constraintVertical_bias="1.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+        <Button
+            style="@style/buttonNumber"
+            android:textColor="@color/red"
+            android:background="@drawable/round"
+            android:onClick="allClearAction"
+            android:text="AC">
+        </Button>
+        <Button
+            style="@style/buttonNumber"
+            android:textColor="@color/red"
+            android:background="@drawable/round"
+            android:onClick="backSpaceAction"
+            android:text="DL">
+        </Button>
+        <Button
+            style="@style/buttonOperator"
+            android:onClick="operationAction"
+            android:text="%">
+        </Button>
+        <Button
+            style="@style/buttonOperator"
+            android:onClick="operationAction"
+            android:text="/">
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+        <Button
+            style="@style/buttonNumber"
+            android:onClick="numberAction"
+            android:text="7">
+        </Button>
+        <Button
+            style="@style/buttonNumber"
+            android:onClick="numberAction"
+            android:text="8">
+        </Button>
+        <Button
+            style="@style/buttonNumber"
+            android:onClick="numberAction"
+            android:text="9">
+        </Button>
+        <Button
+            style="@style/buttonOperator"
+            android:onClick="operationAction"
+            android:text="x">
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+        <Button
+            style="@style/buttonNumber"
+            android:onClick="numberAction"
+            android:text="4">
+        </Button>
+        <Button
+            style="@style/buttonNumber"
+            android:onClick="numberAction"
+            android:text="5">
+        </Button>
+        <Button
+            style="@style/buttonNumber"
+            android:onClick="numberAction"
+            android:text="6">
+        </Button>
+        <Button
+            style="@style/buttonOperator"
+            android:onClick="operationAction"
+            android:text="-">
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+        <Button
+            style="@style/buttonNumber"
+            android:onClick="numberAction"
+            android:text="1">
+        </Button>
+        <Button
+            style="@style/buttonNumber"
+            android:onClick="numberAction"
+            android:text="2">
+        </Button>
+        <Button
+            style="@style/buttonNumber"
+            android:onClick="numberAction"
+            android:text="3">
+        </Button>
+        <Button
+            style="@style/buttonOperator"
+            android:onClick="operationAction"
+            android:text="+">
+        </Button>
+
+    </LinearLayout>
+    <LinearLayout
+        style="@style/buttonRow">
+        <Button
+            style="@style/buttonNumber"
+            android:background="@drawable/round3"
+            android:textColor="@color/orange"
+            android:textSize="40sp"
+            android:onClick="exchangeCurrencies"
+            android:text="@string/euroSign">
+        </Button>
+        <Button
+            style="@style/buttonNumber"
+            android:onClick="numberAction"
+            android:text="0">
+        </Button>
+        <Button
+            style="@style/buttonNumber"
+            android:onClick="numberAction"
+            android:text=".">
+        </Button>
+        <Button
+            style="@style/buttonEqual"
+            android:onClick="equalsAction"
+            android:text="=">
+        </Button>
+
+    </LinearLayout>
+
+</LinearLayout>
